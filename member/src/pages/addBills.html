@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/addBills.css">
+    <link rel="stylesheet" href="../css/mui.picker.min.css">
+    <link rel="stylesheet" href="../css/mui.poppicker.css">
+</head>
+<script src="../js/libs/flexible.js"></script>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="mui-bar mui-bar-nav">
+                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+                <div class="bill-bar">
+                    <p class="color" data-type='1'>支出</p>
+                    <p data-type='2'>收入</p>
+                </div>
+                <p></p>
+            </div>
+            <input type="text" placeholder="0.00" class="money">
+        </header>
+        <section>
+            <div class="mui-slider">
+                <div class="mui-slider-group">
+                </div>
+            </div>
+            <div class="data">
+                <dl>
+                    <dt class="mui-icon mui-icon-chatboxes"></dt>
+                    <dd id='demo6 btn' data-options='{"type":"month"}' class="btn mui-btn mui-btn-block result">01月07日</dd>
+                </dl>
+                <dl>
+                    <dt class="mui-icon mui-icon-personadd"></dt>
+                    <dd>个人账单</dd>
+                </dl>
+                <dl>
+                    <dt class="mui-icon mui-icon-chatboxes"></dt>
+                    <dd>不选账户</dd>
+                </dl>
+            </div>
+            <div class="sum">
+                <ul class="computer">
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>.</li>
+                    <li>0</li>
+                    <li>X</li>
+                </ul>
+                <div class="complete">完成</div>
+            </div>
+        </section>
+    </div>
+</body>
+<script type="text/javascript" src="../js/libs/require.js" data-main="../js/page/addBills.js">
+</script>
+
+</html>

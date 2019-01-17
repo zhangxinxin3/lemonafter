@@ -1,0 +1,96 @@
+@import '_minix.scss';
+@import 'common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+.mui-bar-nav {
+    height: pxTorem(35px);
+    background: yellow;
+    @include box_flex;
+    .mui-icon {
+        height: 100%;
+        font-size: pxTorem(18px);
+    }
+    .mui-title {
+        height: 100%;
+        font-size: pxTorem(18px);
+        line-height: pxTorem(35px);
+    }
+}
+
+section {
+    margin-top: pxTorem(35px);
+    width: 100%;
+    @include flex;
+    @include box_flex;
+    @include align;
+    @include direction(column);
+    .top {
+        width: 100%;
+        height: pxTorem(50px);
+        @include box_flex;
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        @include align;
+        @include justify(space-between);
+        border-bottom: solid 1px #fff;
+        >dt {
+            width: pxTorem(30px);
+            height: pxTorem(35px);
+            background: yellow;
+            border-radius: 100%;
+            line-height: pxTorem(35px);
+            text-align: center;
+        }
+        >dd {
+            input {
+                height: pxTorem(30px);
+                background: #efeff4;
+                border: none;
+                text-align: right;
+                font-size: pxTorem(16px);
+            }
+        }
+    }
+    .mui-slider {
+        width: 100%;
+        border-bottom: solid 1px #666;
+        .mui-slider-group {
+            width: 100%;
+            .mui-slider-item {
+                width: 100%;
+                padding: 0 pxTorem(10px);
+                @include sizing;
+                >div {
+                    width: 100%;
+                    @include box_flex;
+                    @include flexWrap;
+                    p {
+                        width: pxTorem(40px);
+                        height: pxTorem(40px);
+                        line-height: pxTorem(40px);
+                        border-radius: 100%;
+                        background: yellow;
+                        text-align: center;
+                        margin: pxTorem(15px);
+                    }
+                }
+            }
+        }
+    }
+    .save {
+        width: 85%;
+        height: pxTorem(35px);
+        line-height: pxTorem(35px);
+        text-align: center;
+        background: yellow;
+        color: #fff;
+        font-size: pxTorem(16px);
+        border-radius: pxTorem(20px);
+        margin-top: pxTorem(50px);
+    }
+}

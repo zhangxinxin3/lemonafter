@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mui.picker.min.css">
+    <link rel="stylesheet" href="css/mui.poppicker.css">
+</head>
+
+<body>
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+        <!-- 菜单容器 -->
+        <aside class="mui-off-canvas-left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 菜单具体展示内容 -->
+                    <dl class="list type">
+                        <dt>收支类型</dt>
+                        <dd>
+                            <div>
+                                <p class="allBill">全部支出</p>
+                                <p class="allTion">全部收入</p>
+                                <p>全部其他</p>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="list classification">
+                        <dt>收支分类</dt>
+                        <dd>
+                            <div class="allType" data-name="allBill"></div>
+                            <div class="allClass" data-name="allTion"></div>
+                        </dd>
+                    </dl>
+                    <div class="lists">
+                        <p class="reset">重置</p>
+                        <p class="sure">确定</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap wrap">
+            <!-- 主页面标题 -->
+            <header class="mui-bar mui-bar-nav">
+                <div class="left">
+                    <p>本月支出(元)</p>
+                    <p><b>55656</b>.00</p>
+                    <p>本月收入 <i class="income">9665.00</i></p>
+                </div>
+                <div class="right">
+                    <div class="se">
+                        <p id='showUserPicker' class="mui-btn mui-btn-block mor">年</p>
+                        <div id='userResult' class="ui-alert"></div>
+                        <p id='demo6 btn' data-options='{"type":"month"}' class="btn mui-btn mui-btn-block result">2019</p>
+                    </div>
+                    <p>本月结余 <i class="income">-45981.00</i></p>
+                </div>
+            </header>
+            <div class="mui-content mui-scroll-wrapper wrapper">
+                <div class="mui-scroll">
+                    <!-- 主界面具体展示内容 -->
+                    <div class="top">
+                        <p class="screen">筛选</p>
+                        <div class="con">
+                            <p class="color">账单</p>
+                            <p>图表</p>
+                        </div>
+                        <p classs="search">搜索</p>
+                    </div>
+                    <div class="bill">
+                        <ul class="mui-table-view">
+                            <!-- <div class="mui-slider-right mui-disabled">
+                                <a class="mui-btn mui-btn-red">删除</a>
+                            </div>
+                            <div class="mui-slider-handle">
+                                左滑显示删除按钮
+                            </div> -->
+                        </ul>
+                        <div class="month">
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <p>图表</p>
+                    </div>
+                </div>
+
+            </div>
+            <footer>
+                <dl>
+                    <dt class="mui-icon mui-icon-starhalf"></dt>
+                    <dd>
+                        首页
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="mui-icon mui-icon-starhalf"></dt>
+                    <dd>
+                        首页
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="mui-icon mui-icon-starhalf"></dt>
+                    <dd>
+                        首页
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="mui-icon mui-icon-starhalf"></dt>
+                    <dd>
+                        首页
+                    </dd>
+                </dl>
+                <div class="add">
+                    <p class="adds">+</p>
+                </div>
+            </footer>
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/libs/require.js" data-main="js/page/index.js"></script>
+
+</html>

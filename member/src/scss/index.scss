@@ -1,0 +1,413 @@
+@import '_minix.scss';
+@import 'common.scss';
+.wrap {
+    widows: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+.mui-off-canvas-left {
+    background: #fff;
+    .mui-scroll-wrapper {
+        padding: pxTorem(15px);
+        @include sizing;
+    }
+}
+
+.mui-scroll {
+    width: 100%;
+    height: 100%;
+    font-size: pxTorem(15px);
+    .list {
+        width: 100%;
+        @include sizing;
+        @include box_flex;
+        @include direction(column);
+        dt {
+            width: 100%;
+            height: pxTorem(30px);
+            line-height: pxTorem(30px);
+            border-left: solid pxTorem(2px) yellow;
+            padding-left: pxTorem(5px);
+            @include sizing;
+            font-size: pxTorem(18px);
+        }
+        dd {
+            margin: pxTorem(8px) 0;
+            width: 100%;
+            padding: 0 pxTorem(10px);
+            @include sizing;
+            @include box_flex;
+            @include flexWrap;
+            div {
+                @include box_flex;
+                @include flexWrap;
+                margin: pxTorem(5px) 0;
+                >p {
+                    margin: pxTorem(5px) pxTorem(10px);
+                    padding: pxTorem(8px);
+                    @include sizing;
+                    border: solid 1px #ccc;
+                    border-radius: pxTorem(20px);
+                }
+                .addActive {
+                    border-color: yellow;
+                }
+            }
+        }
+    }
+    .lists {
+        width: 100%;
+        height: pxTorem(40px);
+        line-height: pxTorem(40px);
+        padding: 0 pxTorem(10px);
+        @include box_flex;
+        @include align;
+        border-left: solid pxTorem(2px) yellow;
+        padding-left: pxTorem(5px);
+        @include sizing;
+        >p {
+            padding: 0 pxTorem(15px);
+            @include sizing;
+            border: solid 1px #ccc;
+            border-radius: pxTorem(20px);
+            margin: pxTorem(5px) pxTorem(10px);
+        }
+        .back {
+            background: yellow;
+            color: #fff;
+        }
+    }
+}
+
+header {
+    width: 100%;
+    height: pxTorem(100px)!important;
+    background: yellow!important;
+    @include box_flex;
+    @include justify(space-between);
+    padding: pxTorem(5px) pxTorem(15px)!important;
+    padding-bottom: pxTorem(12px)!important;
+    @include sizing;
+    .left {
+        p:nth-child(1) {
+            font-size: pxTorem(14px);
+            color: #000;
+        }
+        p:nth-child(2) {
+            font-size: pxTorem(14px);
+            color: #000;
+            margin: pxTorem(5px) 0 pxTorem(16px) 0;
+            b {
+                font-size: pxTorem(22px);
+            }
+        }
+        p:nth-child(3) {
+            font-size: pxTorem(14px);
+            color: #000;
+            i {
+                font-size: pxTorem(16px);
+            }
+        }
+    }
+    .right {
+        @include box_flex;
+        @include direction(column);
+        @include justify(space-between);
+        @include align(flex-end);
+        .se {
+            @include box_flex;
+            p {
+                padding: 0 pxTorem(8px);
+                @include sizing;
+                font-size: pxTorem(15px);
+                margin: 0 pxTorem(5px);
+                border: solid 1px #000;
+                border-radius: pxTorem(10px);
+            }
+            p:nth-child(2) {
+                padding-top: pxTorem(3px);
+                @include sizing;
+            }
+        }
+        p {
+            font-size: pxTorem(14px);
+            color: #000;
+            i {
+                font-size: pxTorem(16px);
+            }
+        }
+    }
+}
+
+// .mui-scroll-wrapper {}
+.mui-content {
+    position: absolute;
+    bottom: pxTorem(65px);
+    padding-top: 0!important;
+    @include flex;
+    top: pxTorem(100px);
+    z-index: 0;
+    .mui-scroll {
+        @include box_flex;
+        @include direction(column);
+        .top {
+            padding: 0 pxTorem(15px);
+            @include sizing;
+            width: 100%;
+            height: pxTorem(50px);
+            @include box_flex;
+            @include justify(space-between);
+            @include align;
+            font-size: pxTorem(15px);
+            p {
+                color: #000;
+            }
+            .con {
+                width: pxTorem(110px);
+                height: pxTorem(35px);
+                border: solid 1px #666;
+                border-radius: pxTorem(50px);
+                @include box_flex;
+                overflow: hidden;
+                p {
+                    height: 100%;
+                    @include flex;
+                    @include box_flex;
+                    @include justify;
+                    @include align;
+                    color: #999;
+                }
+                p.color {
+                    background: yellow;
+                    color: #000;
+                }
+            }
+        }
+        .bill {
+            width: 100%;
+            @include flex;
+            padding: 0 pxTorem(15px);
+            @include sizing;
+            font-size: pxTorem(14px);
+            overflow-y: auto;
+            .mui-table-view {
+                width: 100%;
+                height: pxTorem(50px)!important;
+                .mui-table-view-cell {
+                    width: 100%;
+                    @include box_flex;
+                    @include direction(column);
+                    .mui-navigate-right {
+                        width: 100%;
+                        height: pxTorem(50px)!important;
+                        @include box_flex;
+                        @include justify(space-between);
+                        @include align;
+                        dl {
+                            width: 100%;
+                            height: pxTorem(50px);
+                            @include box_flex;
+                            @include align;
+                            dt {
+                                width: pxTorem(20px);
+                                height: pxTorem(20px);
+                                margin-right: pxTorem(8px);
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            dd {
+                                font-size: pxTorem(16px);
+                            }
+                        }
+                        .cen {
+                            width: 100%;
+                            height: pxTorem(50px);
+                            font-size: pxTorem(14px);
+                            @include box_flex;
+                            margin-right: pxTorem(40px);
+                            p {
+                                width: 100%;
+                                height: 100%;
+                                @include box_flex;
+                                @include direction(column);
+                                @include align;
+                                @include justify;
+                                margin: 0 pxTorem(5px);
+                            }
+                        }
+                    }
+                    .mui-collapse-content {
+                        .wai {
+                            width: 100%;
+                            height: pxTorem(60px);
+                            @include box_flex;
+                            @include justify(space-between);
+                            @include align;
+                            padding: 0 pxTorem(15px);
+                            @include sizing;
+                            border-bottom: solid 1px #666;
+                            >dt {
+                                .nei {
+                                    @include box_flex;
+                                    @include align;
+                                    >dt {
+                                        width: pxTorem(40px);
+                                        height: pxTorem(40px);
+                                        margin-right: pxTorem(8px);
+                                        border-radius: 100%;
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 100%;
+                                        }
+                                    }
+                                    >dd {
+                                        font-size: pxTorem(16px);
+                                    }
+                                }
+                            }
+                            >dd {
+                                font-size: pxTorem(18px);
+                            }
+                        }
+                    }
+                }
+            }
+            .payColor {
+                color: green;
+            }
+            .icomeColor {
+                color: red;
+            }
+            .month {
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                display: none;
+                .month-tit {
+                    width: 100%;
+                    height: pxTorem(50px);
+                    @include box_flex;
+                    @include justify(space-between);
+                    @include align;
+                    dl {
+                        @include box_flex;
+                        @include align;
+                        dt {
+                            width: pxTorem(20px);
+                            height: pxTorem(20px);
+                            margin-right: pxTorem(8px);
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        dd {
+                            color: #999;
+                        }
+                    }
+                }
+                .monthes {
+                    .wai {
+                        width: 100%;
+                        height: pxTorem(60px);
+                        @include box_flex;
+                        @include justify(space-between);
+                        @include align;
+                        padding: 0 pxTorem(15px);
+                        @include sizing;
+                        border-bottom: solid 1px #666;
+                        >dt {
+                            .nei {
+                                @include box_flex;
+                                @include align;
+                                >dt {
+                                    width: pxTorem(40px);
+                                    height: pxTorem(40px);
+                                    margin-right: pxTorem(8px);
+                                    border-radius: 100%;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        border-radius: 100%;
+                                    }
+                                }
+                                >dd {
+                                    font-size: pxTorem(16px);
+                                }
+                            }
+                        }
+                        >dd {
+                            font-size: pxTorem(18px);
+                            // color: aqua;
+                        }
+                    }
+                }
+            }
+        }
+        .chart {
+            display: none;
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: pxTorem(65px);
+    background: #fff;
+    @include box_flex;
+    @include align;
+    >dl {
+        height: 100%;
+        @include flex;
+        @include box_flex;
+        @include direction(column);
+        @include align;
+        >dt {
+            width: pxTorem(25px);
+            height: pxTorem(25px);
+            >img {
+                width: 100%;
+                height: 100%；
+            }
+        }
+        >dd {
+            margin-top: pxTorem(10px);
+            font-size: pxTorem(15px);
+        }
+    }
+    .add {
+        width: pxTorem(60px);
+        height: pxTorem(60px);
+        background: #fff;
+        border-radius: 100%;
+        position: absolute;
+        top: pxTorem(-40px);
+        left: 50%;
+        margin-left: pxTorem(-30px);
+        padding: pxTorem(10px);
+        @include sizing;
+        line-height: pxTorem(40px);
+        text-align: center;
+        p {
+            width: 100%;
+            height: 100%;
+            background: yellow;
+            font-size: pxTorem(28px);
+            color: #fff;
+            border-radius: 100%;
+        }
+    }
+}
+
+.mui-dtpicker {
+    z-index: 0!important;
+}
